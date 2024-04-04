@@ -1,0 +1,82 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Conhecimentos</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:language-html5" title="HTML">
+          HTML5 é uma linguagem de marcação de hipertexto, que usamos para marcar os elementos da página e construí-la.
+        </Feature>
+        <Feature icon="mdi:language-css3" title="CSS">
+          CSS3 é uma linguagem de estilo usada para descrever a apresentação dos elementos da página os estilizando.
+        </Feature>
+        <Feature icon="mdi:language-javascript" title="JavaScript">
+          JavaScript é uma linguagem de programação interpretada usada no desenvolvimento web para descrever funcionalidades e comportamentos da página.
+        </Feature>
+        <Feature icon="mdi:sass" title="sass">
+          SASS é uma linguagem de folhas de estilo que estende o CSS, permitindo uma escrita mais eficiente e organizada.
+        </Feature>
+        <Feature icon="mdi:react" title="react">
+          React é uma biblioteca JavaScript usada para construir interfaces de usuário dinâmicas e eficientes.
+        </Feature>
+        <Feature icon="mdi:skip-next-circle-outline" title="Next.js">
+          Next.js é um framework React de código aberto que simplifica o desenvolvimento web com recursos como renderização do lado do servidor e roteamento fácil.
+        </Feature>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Projetos</h2>
+      <ContentMedia imgSrc="/Sign-In.png">
+        <h2>Login / SignUp Web & Mobile</h2>
+        <p class="text-2xl">
+          Desenvolvemos um aplicativo de Login/SignUp versátil, seguro e intuitivo para Web e Mobile. 
+          Combinando habilidades de design e desenvolvimento, criamos uma solução que oferece uma experiência 
+          de usuário consistente em todas as plataformas. Integrando recursos de segurança robustos e uma interface 
+          responsiva, garantimos uma experiência de autenticação confiável e eficiente para os usuários.
+        </p>
+      </ContentMedia>
+      <ContentMedia imgSrc="/Food-App.png" reverseImg={true}>
+        <h2>Food Ordering App UI design</h2>
+        <p class="text-2xl">
+          Desenvolvemos um design de interface de usuário (UI) cativante e funcional para um aplicativo de pedido de comida. 
+          Nosso objetivo foi criar uma experiência intuitiva e visualmente atraente, permitindo aos usuários navegar facilmente 
+          pelos restaurantes e fazer pedidos personalizados. Com uma abordagem centrada no usuário e atenção aos detalhes, nosso 
+          design promove uma experiência de pedido de comida simplificada e agradável.
+        </p>
+      </ContentMedia>
+      <ContentMedia imgSrc="/Landing-Page-Design.png">
+        <h2>Landing Page Design</h2>
+        <p class="text-2xl">
+          Desenvolvemos uma landing page envolvente e eficaz, com design responsivo e conteúdo persuasivo para direcionar ações 
+          específicas dos visitantes. Nosso foco foi atrair, engajar e converter leads de forma eficiente, destacando os principais 
+          benefícios e propostas de valor. Este projeto reflete nossa expertise em criar experiências online que geram resultados 
+          mensuráveis para nossos clientes.
+        </p>
+      </ContentMedia>
+    </div>
+  </section> 
+
+  <section class="mb-32 mt-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Estatísticas</h2>
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+        <Counter count="30" title="Trabalhos" />
+        <Counter count="13" title="Projetos" />
+        <Counter count="25" title="Certificações" />
+        <Counter count="100+" title="Commits" />
+        <!-- sub="Since launch" -->
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
